@@ -10,20 +10,19 @@
 
         <header>
             <h1>Juan Pablo Berríos</h1>
-            <p>Computer Science Engineering, admitted in 2024</p>
+            <p id="myInfo">Computer Science Engineering, admitted in 2024</p>
             <nav>
-                <a href="#skills">My Skills</a> |
-                <a href="#projects">My Projects</a> |
-                <a href="#contact">Contact Me</a>
+                <a href="#skills" class="navigation">My Skills</a> 
+                <a href="#projects" class="navigation">My Projects</a> 
+                <a href="#contact" class="navigation">Contact Me</a>
             </nav>
         </header>
         <main>
             <section>
                 <h2>Introduction</h2>
-                <p>I am Juan Pablo Berrios a student from </p>
-                <a href="https://www.uandes.cl/">Los Andes university</a>
+                <p>I am Juan Pablo Berrios a student from <a href="https://www.uandes.cl/">Los Andes university</a>.</p>
                 <p>I am currently in my sixth semester of Computer Engineering. On this page,
-                     I will showcase some of the projects I have completed, well as the programming languages 
+                     I will showcase some of the projects I have completed, as well the programming languages 
                      and tools I use.</p>
             </section>
 
@@ -56,7 +55,7 @@
             <section id="projects">
                 <h2>Projects</h2>
 
-                <article>
+                <article class="p1">
                     <h3>Hitori puzzle</h3>
                     <p>A puzzle game named hitori originated in Japan. The main idea is detect the repeated numbers in the board and discard them.</p>
                     <p>Programmed in HTML, CSS and JavaScript.</p>
@@ -66,10 +65,16 @@
                     </figure>
                 </article>
 
-                <article>
+                <article class="p2">
                     <h3>Tabular Data Manager</h3>
                     <p>A data manager similar to Excel, it can manipulate data only in some ways. Also can export and import data in CSV and JSON.</p>
                     <p>Programmed in Python.</p>
+
+                    <figure>
+                        <img src="images/Data.png" alt="How the program looks like in the console">
+                        <figcaption>An example of how the program looks in the terminal</figcaption>
+                    </figure>
+
                 </article>
                 <aside>
                     <p>More of my projects in:</p>
@@ -92,7 +97,6 @@
                 <button type="submit">Send</button>
             </form>
             <a href="https://github.com/jpberrios1/webtech-lab-01">The repository of this page</a>
-
         </footer>
     </body>
 </html>
