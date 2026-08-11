@@ -1,23 +1,31 @@
 h2
 {
     font-size: 30px;
-    font-family: Georgia;
+    font-family: Georgia, serif;
     margin-left: 3px;
-
+    font-weight: 400;
 }
 
 h1
 {
     font-size: 40px;
-    font-family: Georgia;
+    font-family: Georgia, serif;
     text-align: center;
     margin-bottom: 0;
 }
 
 h3
-{
+{   padding-bottom: 0;
     font-size: 30px;
     margin-left: 10px;
+}
+
+header
+{
+    border-bottom-width: 10px;
+    border-bottom-style: double;
+    border-bottom-color: #999897;
+    padding-bottom: 15px;
 }
 
 nav
@@ -27,17 +35,12 @@ nav
     gap: 35px;
 }
 
-nav a
-{
-    font-family: "Times New Roman";
-    font-size: 16px;
-}
 
 p
 {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-size: 18px;
-    line-height: 18px;
+    line-height: 20px;
     margin-left: 8px;
 }
 
@@ -56,14 +59,52 @@ th, td
     border-width: 2px; 
 }
 
+nav a
+{
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+    
+}
+
 figcaption
 {
     text-align: center;
     font-size: 18px;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin-top: 20px;
     font-style: italic;
 }
+
+footer form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+footer button
+{
+    height: 30px;
+    width: 20rem;
+}
+
+footer a 
+{
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 20px;
+    font-style: italic;
+    font-family: "Times New Roman", serif;
+}
+
+input, textarea
+{
+    height: 1.3rem;
+    width: 25rem;
+}   
 
 #projects article img
 {
@@ -77,8 +118,7 @@ figcaption
     font-size: 16px;
     text-align: center;
     margin-top: 5px;
-    font-family: Arial;
-    
+    font-family: Arial, sans-serif;
 }
 
 #projects
@@ -95,6 +135,8 @@ figcaption
 #projects h2
 {
     grid-area: title;
+    margin-bottom: 0;
+    margin-top: 30px;
 }
 
 .p1 
@@ -102,12 +144,32 @@ figcaption
     grid-area: p1;
 }
 
+.p1 h3
+{
+    font-weight: 250;
+}
+
 .p2 
 {
     grid-area: p2;
 }
 
+.p2 h3
+{
+    font-weight: 250;
+}
+
 #projects aside
 {
     grid-area: sidebar;
+    text-align: center;
+    border-bottom-width: 10px;
+    border-bottom-style: double;
+    border-bottom-color: #999897;
+}
+
+#projects aside p, #projects aside a
+{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
