@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Juan Pablo Berrios</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Juan Pablo Berríos</h1>
+            <p>Computer Science Engineering, admitted in 2024</p>
+            <nav>
+                <a href="#skills">My Skills</a> |
+                <a href="#projects">My Projects</a> |
+                <a href="#contact">Contact Me</a>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>Introduction</h2>
+                <p>I am Juan Pablo Berrios a student from </p>
+                <a href="https://www.uandes.cl/">Los Andes university</a>
+                <p>I am currently in my sixth semester of Computer Engineering. On this page,
+                     I will showcase some of the projects I have completed, well as the programming languages 
+                     and tools I use.</p>
+            </section>
+
+            <section id="skills">
+                <h2>Languages and Tools I use</h2>
+                <table>
+                    <tr>
+                        <th>Programming Languages</th>
+                        <th>Tools</th>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Visual Studio Code</td>
+                    </tr>
+                    <tr>
+                        <td>C/C++</td>
+                        <td>Github</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>WSL</td>
+                    </tr>
+                    <tr>
+                        <td>Postgresql</td>
+                        <td>PgAdmin</td>
+                    </tr>
+                </table>
+
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+
+                <article>
+                    <h3>Hitori puzzle</h3>
+                    <p>A puzzle game named hitori originated in Japan. The main idea is detect the repeated numbers in the board and discard them.</p>
+                    <p>Programmed in HTML, CSS and JavaScript.</p>
+                    <figure>
+                        <img src="images/hitori.png" alt="An example of the web page for hitori">
+                        <figcaption>This is how the web page looks like</figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <h3>Tabular Data Manager</h3>
+                    <p>A data manager similar to Excel, it can manipulate data only in some ways. Also can export and import data in CSV and JSON.</p>
+                    <p>Programmed in Python.</p>
+                </article>
+                <aside>
+                    <p>More of my projects in:</p>
+                    <a href="https://github.com/jpberrios1">My GitHub</a> 
+                </aside>
+            </section>
+
+        </main>
+        <footer id="contact">
+            <h2>Contact</h2>
+            <form id="contact-section" action="/contact" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <a href="https://github.com/jpberrios1/webtech-lab-01">The repository of this page</a>
+
+        </footer>
+    </body>
+</html>
