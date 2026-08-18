@@ -86,8 +86,11 @@ footer form
 
 footer button
 {
-    height: 30px;
-    width: 20rem;
+    height: 40px;
+    width: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+
 }
 
 footer a 
@@ -103,16 +106,10 @@ footer a
 input, textarea
 {
     height: 1.3rem;
-    width: 25rem;
+    width: 100%;
+    max-width: 25rem;
 }
 
-button
-{
-    width: 150px;
-    height: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 
 aside, h2
 {
@@ -121,6 +118,37 @@ aside, h2
     margin-left: 3px;
     font-weight: 400;
     text-align: left;
+}
+
+#header
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#projectBtn
+{
+    width: 150px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#darkMode
+{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    margin: 0;
+    height: 35px;
+    width: 90px;
+    font-family: 'Courier New', Courier, monospace;
+    
 }
 
 #projects article img
@@ -182,6 +210,8 @@ aside, h2
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .formInputs label
@@ -239,6 +269,15 @@ aside, h2
     font-weight: 250;
 }
 
+#formSucces
+{
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
 #projects aside
 {
     grid-area: sidebar;
@@ -257,4 +296,46 @@ aside, h2
 #statusProjects
 {
     background-color: black;
+}
+
+/*Dark Theme*/
+
+.dark-theme
+{
+    background-color: #121212; 
+    color: #E0E0E0; 
+}
+
+.dark-theme table, .dark-theme th, .dark-theme td
+{
+    border-color: #888888; 
+}
+
+.dark-theme a
+{
+    color: #90CAF9; 
+}
+
+.dark-theme a:visited 
+{
+    color: #CE93D8; 
+}
+
+.dark-theme aside, .dark-theme header
+{
+    border-bottom-color: #555555;
+}
+
+.dark-theme input[type="text"], .dark-theme input[type="email"], .dark-theme textarea, .dark-theme select
+{
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+    border: 1px solid #888888;
+}
+
+.dark-theme button
+{
+    background-color: #333333;
+    color: #FFFFFF;
+    border: 1px solid #888888;
 }

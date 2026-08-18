@@ -112,6 +112,8 @@ function renderTable(projectsToRender)
 renderTable(Projects);
 container.insertBefore(table, projectForm);
 
+//Filter section
+
 const deployableMenu = document.getElementById("filter");
 const applyContributors = document.getElementById("contibFilter");
 
@@ -130,7 +132,6 @@ function ApplyFilters()
 }
 deployableMenu.addEventListener( ("change"), ApplyFilters);
 applyContributors.addEventListener( ("change"), ApplyFilters);
-
 
 
 const form = document.getElementById("suggestions");
@@ -152,6 +153,8 @@ form.addEventListener('submit', (event) => {
     form.reset();    
 });
 
+// Delete section
+
 table.addEventListener('click', (event) => {
     if (event.target.classList.contains("deleteBtn"))
     {
@@ -163,6 +166,80 @@ table.addEventListener('click', (event) => {
 });
 
 
+// DarkMode Section}
+
+
+const darkModeBtn = document.getElementById("darkMode");
+const bodyElement = document.body;
+
+darkModeBtn.addEventListener("click", () => {
+    const isDark = bodyElement.classList.toggle("dark-theme");
+
+    darkModeBtn.setAttribute('aria-pressed', isDark);
+
+    if (isDark)
+    {
+        darkModeBtn.textContent = "Light Mode";
+    }
+    else
+    {
+        darkModeBtn.textContent = "Dark Mode ";
+    }
+
+});
+
+// Contact section
+
+const contactForm = document.getElementById("contact-section");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
+const messageError = document.getElementById("messageError");
+const formSuccess = document.getElementById("formSucces");
+
+contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    nameError.textContent = "";
+    emailError.textContent = "";
+    messageError.textContent = "";
+    formSuccess.textContent = "";
+
+    let flag = true;
+
+    if (nameInput.value.trim() === "")
+    {
+        nameError.textContent = "Please enter your name.";
+        flag = false;
+    }
+
+    const verifyEmail = emailInput.value.trim();
+    if (verifyEmail === "")
+    {
+        emailError.textContent = "Please enter your email.";
+        flag = false;
+    } 
+    else if (!verifyEmail.includes("@") || !verifyEmail.includes("."))
+    {
+        emailError.textContent = "Please enter a valid email adress.";
+        flag = false;
+    }
+
+    if (messageInput.value.trim() === "")
+    {
+        messageError.textContent = "Please enter your message.";
+        flag = false;
+    }
+
+    if (flag)
+    {
+        formSuccess.textContent = "Thank you! Your message has been succesfully.";
+        contactForm.reset();
+    }
+});
 
 
 

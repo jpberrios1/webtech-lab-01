@@ -8,15 +8,18 @@
     </head>
     <body>
 
-        <header>
-            <h1>Juan Pablo Berríos</h1>
-            <p id="myInfo">Computer Science Engineering, admitted in 2024</p>
-            <nav>
-                <a href="#skills" class="navigation">My Skills</a> 
-                <a href="#projects" class="navigation">My Projects</a> 
-                <a href="#contact" class="navigation">Contact Me</a>
-                <a href="#log" class = "navigation">Development Log</a>
-            </nav>
+        <header id="header">
+            <div>
+                <h1>Juan Pablo Berríos</h1>
+                <p id="myInfo">Computer Science Engineering, admitted in 2024</p>
+                <nav>
+                    <a href="#skills" class="navigation">My Skills</a> 
+                    <a href="#projects" class="navigation">My Projects</a> 
+                    <a href="#log" class = "navigation">Development Log</a>
+                    <a href="#contact" class="navigation">Contact Me</a>
+                    <button type="button" id="darkMode" aria-pressed="false">Dark mode </button>
+                </nav>
+            </div>
         </header>
         <main>
             <section>
@@ -105,7 +108,7 @@
                             </div>
                         </div>
 
-                        <button type="submit">Add Project</button>
+                        <button type="submit" id="projectBtn">Add Project</button>
 
                     </form>
                     <p>More of my projects in <a href="https://github.com/jpberrios1">My GitHub</a></p>
@@ -115,17 +118,23 @@
         </main>
         <footer id="contact">
             <h2>Contact</h2>
-            <form id="contact-section" action="/contact" method="post">
+            <form id="contact-section" action="/contact" method="post" novalidate>
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name">
+                <span id="nameError" class="errorMessage" aria-live="polite"></span>
 
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email">
+                <span id="emailError" class="errorMessage" aria-live="polite"></span>
 
                 <label for="message">Message</label>
                 <textarea id="message" name="message"></textarea>
-                <button type="submit">Send</button>
+                <span id="messageError" class="errorMessage" aria-live="polite"></span>
+
+                <button type="submit" id="contactBtn">Send</button>
             </form>
+            <div id="formSucces" aria-live="polite"></div>
+
             <a href="https://github.com/jpberrios1/webtech-lab-01">The repository of this page</a>
         </footer>
         <script src="logic.js"></script>
