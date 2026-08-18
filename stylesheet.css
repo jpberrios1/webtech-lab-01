@@ -106,6 +106,14 @@ input, textarea
     width: 25rem;
 }
 
+button
+{
+    width: 150px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 aside, h2
 {
     font-size: 30px;
@@ -146,6 +154,69 @@ aside, h2
     grid-area: title;
     margin-bottom: 0;
     margin-top: 30px;
+}
+
+#suggestions
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+#contact-section label
+{
+    font-family: Arial, sans-serif;
+}
+
+.deleteBtn
+{
+    height: 50px;
+    width: 100px;
+    background: transparent;
+}
+
+.formInputs
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.formInputs label
+{
+    font-family: Arial, sans-serif;
+}
+
+.filterGroup
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.checkbox
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;  
+}
+
+.checkbox input
+{
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+.filterGroup label
+{
+    font-size: 25px;
+    font-family: Arial, sans-serif;
 }
 
 .p1 

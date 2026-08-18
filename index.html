@@ -15,6 +15,7 @@
                 <a href="#skills" class="navigation">My Skills</a> 
                 <a href="#projects" class="navigation">My Projects</a> 
                 <a href="#contact" class="navigation">Contact Me</a>
+                <a href="#log" class = "navigation">Development Log</a>
             </nav>
         </header>
         <main>
@@ -77,8 +78,36 @@
 
                 </article>
                 <aside>
-                    <h2>Status Projects</h2>
+                    <h2>Development Log</h2>
 
+                    <div class="filterGroup">
+                        <label for="filter">Filters</label>
+                        <select id="filter" name="filters">
+                            <option value="All">All</option>
+                            <option value ="Finished">Completed Projects</option>
+                            <option value="In Progress">Projects In Progress</option>
+                        </select>
+                        <div class="checkbox">
+                            <input type="checkbox" id="contibFilter">
+                            <label for="contibFilter">Only show projects with contributors</label>
+                        </div>
+                    </div>
+
+
+                    <form id="suggestions" action="/suggestion" method="post">
+                        <div class="formInputs">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" name="titleProject" required>
+                            
+                            <div class="checkbox">
+                                <input type="checkbox" id="participate">
+                                <label for="participate"> Participate as a contributor?</label>
+                            </div>
+                        </div>
+
+                        <button type="submit">Add Project</button>
+
+                    </form>
                     <p>More of my projects in <a href="https://github.com/jpberrios1">My GitHub</a></p>
                 </aside>
             </section>
@@ -88,18 +117,17 @@
             <h2>Contact</h2>
             <form id="contact-section" action="/contact" method="post">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name">
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email">
 
                 <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="message"></textarea>
                 <button type="submit">Send</button>
             </form>
             <a href="https://github.com/jpberrios1/webtech-lab-01">The repository of this page</a>
         </footer>
-    
         <script src="logic.js"></script>
     </body>
 </html>
