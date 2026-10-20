@@ -277,3 +277,34 @@ async function fetchServices() {
 }
 
 fetchServices();
+
+
+//Fetch Single Service by ID
+const searchBtn = document.getElementById("service-search-btn");
+const searchInput = document.getElementById("service-search-id");
+const singleResult = document.getElementById("single-service-result");
+
+searchBtn.addEventListener("click", async () => {
+    const id = searchInput.value.trim();
+    if (!id) return;
+
+    singleResult.textContent = "Searching...";
+    singleResult.style.color = "inherit";
+
+    try {
+        const response = await fetch(`${API_URL}/services/${id}`);
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.errors ? data.errors.join(", ") : "Service not found");
+        }
+
+        const formatter = new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' });
+        singleResult.textContent = `Result: ${data.name} costs ${formatter.format(data.price)}. It has been charged ${data.charged_on_repairs_count} times.`;
+        singleResult.style.color = "green";
+
+    } catch (error) {
+        singleResult.textContent = error.message; // Mostrará el error 404 exacto de la API
+        singleResult.style.color = "red";
+    }
+});
