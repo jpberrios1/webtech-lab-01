@@ -339,3 +339,68 @@ aside, h2
     color: #FFFFFF;
     border: 1px solid #888888;
 }
+
+/* API Demo Section (Lab 10) */
+#api-demos
+{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.demo-container
+{
+    border: 2px dashed #999897;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 10px;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.dark-theme .demo-container
+{
+    border-color: #555555;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+#api-demos h3
+{
+    margin-top: 0;
+    margin-left: 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+#services-list
+{
+    list-style-type: square;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 20px auto 0 auto;
+    padding-left: 20px;
+}
+
+.loading
+{
+    font-style: italic;
+    text-align: center;
+    color: #666;
+}
+
+.error
+{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dark-theme .loading
+{
+    color: #aaa;
+}
+
+.dark-theme .error
+{
+    color: #ff6b6b;
+}

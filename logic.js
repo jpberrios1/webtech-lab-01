@@ -241,11 +241,39 @@ contactForm.addEventListener('submit', (event) => {
     }
 });
 
+//Fetch API for Services
 
+const API_URL = "http://localhost:3000/api/v1";
 
+async function fetchServices() {
+    const loadingMsg = document.getElementById("loading-message");
+    const errorMsg = document.getElementById("error-message");
+    const list = document.getElementById("services-list");
 
-// TODO
-// Agregar un modo oscuro para que cambie toda la pagina
-// Agregarle diseño a ambas tablas de la página
-// Ver el tema del formularios
-// Sería todo por ahora...
+    try {
+        const response = await fetch(`${API_URL}/services`);
+        
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.errors ? errorData.errors.join(", ") : "Failed to load services");
+        }
+
+        const services = await response.json();
+        loadingMsg.style.display = "none"; 
+
+        const formatter = new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' });
+
+        services.forEach(service => {
+            const li = document.createElement("li");
+            li.textContent = `${service.name} - ${formatter.format(service.price)}`;
+            list.appendChild(li);
+        });
+
+    } catch (error) {
+        loadingMsg.style.display = "none";
+        errorMsg.textContent = "The API is not answering: " + error.message;
+        errorMsg.style.display = "block";
+    }
+}
+
+fetchServices();

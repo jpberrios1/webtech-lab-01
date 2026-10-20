@@ -115,6 +115,24 @@
                 </aside>
             </section>
 
+            <section id="api-demos" aria-labelledby="api-demos-heading">
+                <h2 id="api-demos-heading">Live Demonstrations</h2>
+                <p>This section consumes a local Ruby on Rails API (Wheelhouse) using asynchronous JavaScript to display a live pricing list.</p>
+                
+                <article class="demo-container" aria-labelledby="demo-title">
+                    <h3 id="demo-title">Wheelhouse API: Service Prices</h3>
+                    
+                    <div aria-live="polite" aria-atomic="true">
+                        <p id="loading-message" class="loading">Connecting to Rails server...</p>
+                        <p id="error-message" class="error" style="display: none;"></p>
+                    </div>
+                    
+                    <ul id="services-list" aria-label="List of repair services and prices"></ul>
+                </article>
+            </section>
+
+
+
         </main>
         <footer id="contact">
             <h2>Contact</h2>
